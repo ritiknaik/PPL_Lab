@@ -1,0 +1,15 @@
+A-2.c
+---------------------------
+
+        1   How have if-blocks  been translated into GIMPLE  statements? Can you
+            differentiate between conditional and unconditional gotos?
+	ans1. If blocks are translated into goto statements and goto blocks are assigned depending on the condition in the code. 
+        2   Repeat  the  above compilation,  but  now  asking for  another  dump
+            that  of  the pass  "cfg".  View  this  pass  and say  whether  this
+            representation makes it easier to  read and understand GIMPLEs. Draw
+            the control-flow graph  of the program A-2.c on a  piece of paper by
+            looking at the CFG dump.
+
+            Compilation : gcc-4.7.2 -c -fdump-tree-cfg A-2.c
+            View result : vi -O A-2.c A-2.c.*.cfg
+        ans2. It is easier to see the control flow looking at cfg dump.

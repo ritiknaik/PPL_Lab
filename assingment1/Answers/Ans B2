@@ -1,0 +1,6 @@
+B-2.c
+-----------------
+
+        1   What will happen if "a = a + N" is replaced by "a = a + 1"?
+	ans1. As N has no value here. When is replaced by ! then compiler will be able to evaluate the value of a and return it approptiately.
+

@@ -1,0 +1,12 @@
+B-4.c
+----------------
+
+        1   How many  times is the expression  (a + c) computed  in the original
+            code (as seen in the SSA pass)? What about after the FRE pass?
+	ans1. It is calculated 2 times in ssa. It is calculated only once in FRE.
+        2   Have  there been  any more  optimizations  after FRE?  How will  you
+            check?
+	ans2. The final optimized file is with .optimized extension. We can check that file to see if there are any other optimizations.
+        3   Why did  we have  to put a  "return b" in  this assignment?  What if
+            "return b" is changed to "return 0"? Will it make any difference?
+	ans3. If we dont return b then the piece of code would not be useful and we wont be able to get the value of the calculation performed by the code.

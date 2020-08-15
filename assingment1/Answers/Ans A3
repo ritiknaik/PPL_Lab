@@ -1,0 +1,17 @@
+ A-3.c
+ ------------------
+ 
+        1   Identify the basic blocks that correspond  to the while loop. How is
+            the GIMPLE for a while loop different from simple if-else jumps?
+	ans1. bb 3 and bb4  correspond to the while loop. 
+        2   Identify the  basic blocks  for the nested  for-loop. You  should be
+            able  to identify  intializers, conditions  and increments  for each
+            loop as  well as  the shared  inner body.  Is there  really anything
+            special about a for-loop as compared to a while-loop?
+	ans2. bb 5:  variable initialisation of outer loop
+   	      bb 10: checking condition of outer loop 
+   	      bb 6:  variable initialisation of inner loop
+  	      bb 8:  checking condition of inner loop 
+	      bb 7:  inner loop body and variable increment
+	      bb 9:  outer loop variable increment
+

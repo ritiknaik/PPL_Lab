@@ -1,0 +1,12 @@
+A-4.c
+---------------------
+
+        1   How is array declaration and initialization handled?
+	ans1. Arrays are declared in a single statement with its size. Arrays are initialized with assigning the values to the indexes in sequence.
+        2   Why does the statement a[i] = b[i] get broken down to two steps with
+            an intermediate temporary?
+	ans2. Array index is to be calculated o find memory location. Therefore temp variable is used.
+        3   Why are there CLOBBER statements at the end?
+	ans3. To mark the arrays as invalid at scope exit.
+
+

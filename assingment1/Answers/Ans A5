@@ -1,0 +1,16 @@
+A-5.c
+------------------------
+
+        1   Do you notice that each usage of local variable as an operand uses a
+            suffix that can be tracked to it's assignment? Why do some variables
+            have a suffix `(D)'?
+	ans1. Yes we can trace the suffix back to its assignment. Maybe (D) is because c is not declared before using it in the if condition.
+        2   Find the point in the CFG in  which the paths of the two assignments
+            to variable `a'  and `b' merge. You will notice  that PHI statements
+            have  been  introduced.  Can  you   guess  the  syntax  of  the  PHI
+            statements?
+	ans2. The syntax of PHI statements looks like PHI<name1(bb), name2(bb)...> where name is the variable name and bb is the block where it is declared.        
+	3   Can you think of an example in which a PHI node merges more than two
+            versions of a variable?
+	ans3. 
+

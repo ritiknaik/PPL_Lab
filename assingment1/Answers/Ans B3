@@ -1,0 +1,7 @@
+B-3.c
+----------------
+
+        1   In the file B-3.c, what values  can variable `a' take? Will the `if'
+            condition [a  < 4] ever  be true?  Inspect the file  B-3.c.*.vrp1 to
+            analyze the dump.
+	ans1. variable a takes on the values 4 to 100.The if condition can never be true. Cant find comparison a<4 in vrp1.

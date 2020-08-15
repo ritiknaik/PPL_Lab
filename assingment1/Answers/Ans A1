@@ -1,0 +1,27 @@
+Questions an Answers of A-1.
+---------
+
+        1   How  do the  declarations  look in  the  GIMPLE? Specifically,  what
+            happens to multiple  variables declared and initialized  on the same
+            line? What happens to global declaration [int Z]?
+            ans1. In GIMPLE all variables are declared first and the values are assigned to them. Multiple declarations in the same line are converted to declarations in separate lines. Global variable is not declared along with other variables, instead when global variable is used in an operation, the value to be assigned is first stored in a temp variable and later assigned to the global variable.
+
+        2   How are complex  expressions such as [c  = a * b +  25] broken down?
+            Can you  determine a  rule as  to when  temporary variables  will be
+            introduced?
+            ans2. The operation of variable is carried out first and stored in a temporary variable and then the operation is cntinued with the constant [+25] using the temp variable and then store its value in the defined variable. Rule appears as all variable operations are carried out first and stored in the temp variable.
+
+        3   How are  floats/doubles represented in  GIMPLE? What happens  when a
+            float/double is assigned to an integer in [Z = r]?
+	ans3. Floats are written with one digit before the decimal and rest after the decimal multiplied by powers of 10. The float value is converted to nt losing the digits after the decimal.
+        4   How  are reads/writes  to the  global variable  Z performed?  Why is
+            there a temporary introduced  for the statement [Z = Z  + 1] but not
+            for the statements [q = Z] or [Z = p]?
+	ans4. Global variable is not declared along with other variables, instead when global variable is used in an operation, the value to be assigned is first stored in a temp variable and later assigned to the global variable. The integer Z is first assigned to a temp variable, the operation is performed on the temp variable and then assigned back to Z. q = Z or Z = p is assignment operator but Z = Z + 1 is a calculation and hence temp variable is introduced for it.
+     
+-------------------------------------   
+
+
+
+
+
