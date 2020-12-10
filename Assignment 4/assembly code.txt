@@ -1,0 +1,32 @@
+Dump of assembler code for function main:
+   0x000000000000119d <+0>:     endbr64
+   0x00000000000011a1 <+4>:     push   %rbp
+   0x00000000000011a2 <+5>:     mov    %rsp,%rbp
+   0x00000000000011a5 <+8>:     sub    $0x10,%rsp
+   0x00000000000011a9 <+12>:    mov    %fs:0x28,%rax
+   0x00000000000011b2 <+21>:    mov    %rax,-0x8(%rbp)
+   0x00000000000011b6 <+25>:    xor    %eax,%eax
+   0x00000000000011b8 <+27>:    movl   $0xa,-0xc(%rbp)
+   0x00000000000011bf <+34>:    lea    -0xc(%rbp),%rax
+   0x00000000000011c3 <+38>:    mov    %rax,%rdi
+   0x00000000000011c6 <+41>:    callq  0x1189 <_Z3funPi>
+   0x00000000000011cb <+46>:    mov    $0x0,%eax
+   0x00000000000011d0 <+51>:    mov    -0x8(%rbp),%rdx
+   0x00000000000011d4 <+55>:    xor    %fs:0x28,%rdx
+   0x00000000000011dd <+64>:    je     0x11e4 <main+71>
+   0x00000000000011df <+66>:    callq  0x1080 <__stack_chk_fail@plt>
+   0x00000000000011e4 <+71>:    leaveq
+   0x00000000000011e5 <+72>:    retq
+End of assembler dump.
+
+
+Dump of assembler code for function _Z3funPi:
+   0x0000000000001189 <+0>:     endbr64
+   0x000000000000118d <+4>:     push   %rbp
+   0x000000000000118e <+5>:     mov    %rsp,%rbp
+   0x0000000000001191 <+8>:     mov    %rdi,-0x8(%rbp)
+   0x0000000000001195 <+12>:    addq   $0x4,-0x8(%rbp)
+   0x000000000000119a <+17>:    nop
+   0x000000000000119b <+18>:    pop    %rbp
+   0x000000000000119c <+19>:    retq
+End of assembler dump.
